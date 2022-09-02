@@ -1,0 +1,36 @@
+.feature-social-icon {
+    background-color: #f5f4fa;
+    text-align: center;
+  }
+  
+  .feature-icon-wrapper {
+    width: 100%;
+    background-color: #f5f4fa;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+  
+  .feature-list {
+    display: flex;
+    column-gap: 30px;
+  }
+  .feature-item {
+    width: 270px;
+  }
+  
+  .feature-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .feature-text {
+    color: var(--color-grey);
+  }
+  
+  

@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-dark);
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  
+  
+  .link {
+    text-decoration: none;
+    color: currentColor;
+  }
+  
+  .active:hover,
+  .active:focus {
+    color: var(--color-hover-focus);
+  }
+  
+  .list {
+    list-style: none;
+  }
+  
+  .current {
+    color: var(--color-hover-focus);
+  }
+  
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
