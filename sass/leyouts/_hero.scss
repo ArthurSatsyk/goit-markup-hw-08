@@ -2,29 +2,74 @@
     background-color: var(--background-color-first);
     text-align: center;
     color: var(--color-white);
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    // padding-top: 200px;
+    // padding-bottom: 200px;
   }
   
   .hero--bg {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero-bg.jpg);
+    url(/images/hero-img-mob.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0 auto;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx){
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/hero-bg-mob-2x.jpg);
+  }
+
+    @media screen and (min-width: 768px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/hero-img-tab.jpg);
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx){
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(/images/hero-bg-tab-2x.jpg);
+    }
+    }
+    @media screen and (min-width: 1200px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg.jpg);
+      margin: 0 auto;
     max-width: 1600px;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx){
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/hero-bg-desk-2x.jpg);
+  }
+    }
   }
   
   .hero__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 18px;
+    line-height: calc(42/26);
     letter-spacing: 0.06em;
+    width: 290px;
     text-transform: uppercase;
-    width: 696px;
     margin: auto;
     margin-bottom: 30px;
+    @media screen and (min-width: 480px) {
+      font-size: 26px;
+      width: 360px;
+    }
+    @media screen and (min-width: 768px) {
+      margin: auto;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+    margin: auto;
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+    margin-bottom: 30px;
+    }
   }
   
   .hero__btn {

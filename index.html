@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -24,7 +26,8 @@
   <body>
     <!--Header section-->
 
-    <header class="header">
+     <header class="header">
+    
       <div class="container header__wrapper">
         <a href="" class="logo link"><span class="logo--blue">Web</span>Studio</a>
         <nav class="header__nav">
@@ -59,7 +62,74 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="header__menu-btn-mob" data-menu-open>
+             <svg class="header__icon-mob"  width="40" height="40"> 
+              <use href="./images/icons.svg#icon-menu_40px"></use>
+             </svg>
+        </button>
       </div>
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <div class="mob-menu-top">
+        <button type="button" class="close-modal-mob" data-menu-close>
+          <svg class="close-icon-mob" width="40" height="40">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mob-menu__nav">
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item">
+              <a href="" class="link active current">Студия</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="./portfolio.html" class="link active">Портфолио</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="" class="link active">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        </div>
+        <ul class="mob-menu__contact-list list">
+          <li class="mob-menu__tel-item">
+            <a href="tel:+380961111111" class="mob-menu__tel active link">
+  
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="mob-menu__email-item">
+            <a href="mailto:info@devstudio.com" class="mob-menu__email active link">
+              info@devstudio.com
+            </a>
+          </li>
+         
+        </ul>
+        <ul class="mob-soc-list list">
+           <li class="mob-soc-item">
+            <a href="" class="mob-soc-link active link">
+              Instagram
+            </a>
+           </li>
+           <li class="mob-soc-item">
+            <a href="" class="mob-soc-link active link">
+              Twitter
+            </a>
+           </li>
+           <li class="mob-soc-item">
+            <a href="" class="mob-soc-link active link">
+              Facebook
+            </a>
+           </li>
+           <li class="mob-soc-item">
+            <a href="" class="mob-soc-link active link">
+              LinkedIn
+            </a>
+           </li>
+        </ul>
+        </div>
+      </div>
+
     </header>
 
     <!--Main content-->
@@ -129,56 +199,93 @@
           <ul class="services-list list">
             <li class="services-item">
               <div class="services-wrap">
-                <img
+                <picture>
+                  <source
+                  srcset="./images/our-work-1.jpg 1x,
+                   ./images/our-work-1-2x.jpg 2x"
+                  >
+                  <img
                   src="./images/our-work-1.jpg"
                   alt="Написание кода"
                   width="370"
                   height="294"
                   class="services-img"
                 />
+                </picture>
                 <p class="services-text">Десктопные приложения</p>
               </div>
             </li>
             <li class="services-item">
               <div class="services-wrap">
-                <img
+                <picture>
+                   <source
+                   srcset="./images/our-work-2.jpg 1x,
+                   ./images/our-work-2-2x.jpg 2x" 
+                   >
+                   <img
                   src="./images/our-work-2.jpg"
                   alt="Решенение задач"
                   width="370"
                   height="294"
                   class="services-img"
                 />
+                </picture>
                 <p class="services-text">Мобильные приложения</p>
               </div>
             </li>
             <li class="services-item">
               <div class="services-wrap">
-                <img
+                <picture>
+                  <source
+                  srcset="./images/our-work-3.jpg 1x,
+                  ./images/our-work-3-2x.jpg 2x" 
+                  >
+                  <img
                   src="./images/our-work-3.jpg"
                   alt="Процесс дизайна"
                   width="370"
                   height="294"
                   class="services-img"
                 />
+                </picture>
+                
                 <p class="services-text">Дизайнерские решения</p>
               </div>
             </li>
           </ul>
         </div>
-      </section>
+      </section> 
 
-      <section class="team section">
+       <section class="team section"> 
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
           <ul class="teem-list list">
             <li class="team-item">
-              <img
-                src="./images/our-team-1.jpg"
-                alt="Дизайнер Игорь"
-                width="270"
-                height="260"
-                class="team-img"
-              />
+              <picture>
+                <source 
+                srcset="./images/our-team-1-mob.jpg 1x, 
+                ./images/our-team-1-mob-2x.jpg 2x"
+                media="(max-width: 767px)"
+                 >
+                <source 
+                srcset="./images/our-team-1-tab.jpg 1x, 
+                ./images/our-team-1-tab-2x.jpg 2x"
+                media="(min-width: 768px)"
+                 >
+                  <source 
+                  srcset="./images/our-team-1.jpg 1x, 
+                  ./images/our-team-1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                   >
+                   <img
+                   src="./images/our-team-1-mob.jpg"
+                   alt="Дизайнер Игорь"
+                   width="450"
+                   height="460"
+                   class="team-img"
+                 />
+              </picture>
+             
               <div class="wrapper-name-text">
                 <h3 class="team-name">Игорь Демьяненко</h3>
                 <p class="team-text">Product Designer</p>
@@ -215,13 +322,31 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/our-team-2.jpg"
-                alt="Разработчик Ольга"
-                width="270"
-                height="260"
-                class="team-img"
-              />
+              <picture>
+                <source 
+                srcset="./images/our-team-2-mob.jpg 1x, 
+                ./images/our-team-2-mob-2x.jpg 2x"
+                media="(max-width: 767px)"
+                 >
+                <source 
+                srcset="./images/our-team-2-tab.jpg 1x, 
+                ./images/our-team-2-tab-2x.jpg 2x"
+                media="(min-width: 768px)"
+                 >
+                  <source 
+                  srcset="./images/our-team-2.jpg 1x, 
+                  ./images/our-team-2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                   >
+                   <img
+                   src="./images/our-team-2-mob.jpg"
+                   alt="Разработчик Ольга"
+                   width="450"
+                   height="460"
+                   class="team-img"
+                 />
+              </picture>
+             
               <div class="wrapper-name-text">
                 <h3 class="team-name">Ольга Репина</h3>
                 <p class="team-text">Frontend Developer</p>
@@ -258,13 +383,31 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/our-team-3.jpg"
-                alt="Маркетолог Николай"
-                width="270"
-                height="260"
-                class="team-img"
-              />
+              <picture>
+                <source 
+                srcset="./images/our-team-3-mob.jpg 1x, 
+                ./images/our-team-3-mob-2x.jpg 2x"
+                media="(max-width: 767px)"
+                 >
+                <source 
+                srcset="./images/our-team-3-tab.jpg 1x, 
+                ./images/our-team-3-tab-2x.jpg 2x"
+                media="(min-width: 768px)"
+                 >
+                  <source 
+                  srcset="./images/our-team-3.jpg 1x,
+                ./images/our-team-3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                   >
+                   <img
+                   src="./images/our-team-3-mob.jpg"
+                   alt="Маркетолог Николай"
+                   width="450"
+                   height="460"
+                   class="team-img"
+                 />
+              </picture>
+             
               <div class="wrapper-name-text">
                 <h3 class="team-name">Николай Тарасов</h3>
                 <p class="team-text">Marketing</p>
@@ -301,13 +444,31 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/our-team-4.jpg"
+              <picture>
+                <source 
+                srcset="./images/our-team-4-mob.jpg 1x, 
+                ./images/our-team-4-mob-2x.jpg 2x"
+                media="(max-width: 767px)"
+                 >
+                <source 
+                srcset="./images/our-team-4-tab.jpg 1x, 
+                ./images/our-team-4-tab-2x.jpg 2x"
+                media="(min-width: 768px)"
+                 >
+                  <source 
+                  srcset="./images/our-team-4.jpg 1x, 
+                  ./images/our-team-4-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                   >
+                   <img
+                src="./images/our-team-4-mob.jpg"
                 alt="Дизайнер Михаил"
-                width="270"
-                height="260"
+                width="450"
+                   height="460"
                 class="team-img"
               />
+              </picture>
+              
               <div class="wrapper-name-text">
                 <h3 class="team-name">Михаил Ермаков</h3>
                 <p class="team-text">UI Designer</p>
@@ -345,7 +506,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> 
 
       <section class="clients-section">
         <div class="container">
@@ -400,9 +561,9 @@
 
     <!--Footer-->
 
-    <footer class="footer">
+     <footer class="footer">
       <div class="container footer-wrapper">
-        <div>
+        <div class="footer-address-wrapper">
           <a href="" class="logo link"><span class="logo--blue">Web</span>Studio</a>
           <address class="footer-address">
             <p class="footer-text">г. Киев, пр-т Леси Украинки, 26</p>
@@ -418,6 +579,8 @@
             </ul>
           </address>
         </div>
+
+
         <div class="footer-social-wrapper">
           <p class="footer-social-text">Присоединяйтесь</p>
           <ul class="footer-social list">
@@ -451,6 +614,8 @@
             </li>
           </ul>
         </div>
+
+
         <form class="footer-form">
           <label class="form-label">
                <span class="footer-form-text">Подпишитесь на рассылку</span>
@@ -459,9 +624,15 @@
           <button type="submit" class="footer-form-btn">Подписаться</button>
        </form>
       </div>
+      
     </footer>
 
-    <div class="backdrop  is-hidden" data-modal>
+
+
+
+
+      
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-modal-btn" data-modal-close>
           <svg class="close-icon" width="18" height="18">
@@ -521,5 +692,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
