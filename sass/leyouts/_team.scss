@@ -2,6 +2,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
     background-color: var(--background-color-second);
+    @media screen and (min-width: 1200px){
+     padding-top: 94px;
+     padding-bottom: 94px;
+   }
   }
   .team-title {
     font-size: 28px;
@@ -33,6 +37,7 @@
     border-radius: 0px 0px 4px 4px;
     @media screen and (min-width: 768px){
       width: calc((100% - 30px) / 2);
+      height: 440px;
     }
     @media screen and (min-width: 1200px){
       width: calc((100% - 90px) / 4);

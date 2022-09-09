@@ -131,7 +131,7 @@ body {
 .modal {
   position: absolute;
   width: 95%;
-  max-height: 609px;
+  max-height: 578px;
   background-color: var(--color-white);
   top: 50%;
   left: 50%;
@@ -415,10 +415,15 @@ body {
 
 .mob-menu__tel-item {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   line-height: 1.1764705882;
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+@media screen and (min-width: 480px) {
+  .mob-menu__tel-item {
+    font-size: 34px;
+  }
 }
 
 .mob-menu__email-item {
@@ -451,10 +456,15 @@ body {
 
 .mob-soc-link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+@media screen and (min-width: 480px) {
+  .mob-soc-link {
+    font-size: 18px;
+  }
 }
 
 .header__list {
@@ -545,6 +555,12 @@ body {
   padding-top: 118px;
   padding-bottom: 118px;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
 .hero--bg {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-img-mob.jpg);
@@ -634,6 +650,11 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .feature {
+    padding-top: 94px;
+  }
+}
 
 .feature-social-icon {
   background-color: #f5f4fa;
@@ -700,6 +721,7 @@ body {
 @media screen and (min-width: 1200px) {
   .services {
     display: block;
+    padding-top: 34px;
   }
 }
 
@@ -739,6 +761,12 @@ body {
   padding-bottom: 60px;
   background-color: var(--background-color-second);
 }
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
 .team-title {
   font-size: 28px;
@@ -773,6 +801,7 @@ body {
 @media screen and (min-width: 768px) {
   .team-item {
     width: calc((100% - 30px) / 2);
+    height: 440px;
   }
 }
 @media screen and (min-width: 1200px) {
